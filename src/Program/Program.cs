@@ -8,8 +8,8 @@ namespace Ucu.Poo.GameOfLife
 
         static void Main(string[] args)
         {
-            var reader = new Reader();
-            Console.WriteLine(reader);
+            var reader = new FileReader();
+            Console.WriteLine(reader.Reader());
             
 
         }
