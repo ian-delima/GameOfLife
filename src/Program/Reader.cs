@@ -2,9 +2,9 @@ using System;
 using System.IO;
 namespace Ucu.Poo.GameOfLife;
 
-public class FileReader
+public class Reader
 {
-    public bool[,] Reader()
+    public bool[,] FileReader()
     {
         string url = "board.txt";
         string content = File.ReadAllText(url);
