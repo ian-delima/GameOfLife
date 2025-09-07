@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Ucu.Poo.GameOfLife
 {
@@ -9,9 +10,11 @@ namespace Ucu.Poo.GameOfLife
         static void Main(string[] args)
         {
             var reader = new Reader();
-            Console.WriteLine(reader.FileReader());
-            
-
+            for (int i = 0; i < 151; i++)
+            {
+                Console.WriteLine(reader.FileReader());
+                Task.Delay(500);
+            }
         }
     }
 }
