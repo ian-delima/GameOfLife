@@ -2,7 +2,7 @@ using System;
 
 namespace Ucu.Poo.GameOfLife;
 
-public class GamePrinter //Declaro la clase GamePrinter
+public class GamePrinter // Declaro la clase GamePrinter, su responsabilidad es imprimir el tablero dado (por ahora solo en consola)
 {
     private bool[,] matrix; //Declaro un atributo privado matrix 
 
@@ -22,7 +22,7 @@ public class GamePrinter //Declaro la clase GamePrinter
             {
                 Console.Write("|X|");
             }
-            else// Sino imprimo "---"
+            else // Sino imprimo "---"
             {
                 Console.Write("---");
             }

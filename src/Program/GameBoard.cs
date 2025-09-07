@@ -15,10 +15,9 @@ public class GameBoard // Su responsabilidad es conocer las dimensiones del tabl
         this.matrix = initialMatrix;
     }
 
-    public void NewGen()
+    public bool[,] NewGen()
     {
         bool[,] cloneboard = new bool[width, height];
-        cloneboard = new bool[width, height];
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
@@ -64,5 +63,6 @@ public class GameBoard // Su responsabilidad es conocer las dimensiones del tabl
         }
 
         this.matrix = cloneboard;
+        return cloneboard;
     }
 }
