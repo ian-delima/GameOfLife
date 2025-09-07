@@ -1,16 +1,21 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Ucu.Poo.GameOfLife
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
-            for (int i = 0; i <= 200; i++)
+            var reader = new Reader();
+            for (int i = 0; i < 151; i++)
             {
-                //call Printer
-                //await Printer.Delay(500);
+                Console.WriteLine(reader.FileReader());
+                Task.Delay(500);
             }
+
         }
     }
 }
