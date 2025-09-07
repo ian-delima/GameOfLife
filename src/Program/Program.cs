@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Ucu.Poo.GameOfLife
 {
@@ -6,15 +7,12 @@ namespace Ucu.Poo.GameOfLife
     {
         static void Main(string[] args)
         {
-            bool[][] matrix =
+            var reader = new Reader();
+            for (int i = 0; i < 151; i++)
             {
-                new bool[] { true, false, true },
-                new bool[] { false, true, false },
-                new bool[] { true, true, false }
-            };
-
-            GamePrinter printer = new GamePrinter(matrix);
-            printer.PrintMatrix();
+                Console.WriteLine(reader.FileReader());
+                Task.Delay(500);
+            }
         }
     }
 }
