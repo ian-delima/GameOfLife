@@ -15,7 +15,6 @@ namespace Ucu.Poo.GameOfLife
                 Console.WriteLine(reader.FileReader());
                 Task.Delay(500);
             }
-
         }
     }
 }
