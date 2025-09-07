@@ -1,32 +1,37 @@
+using System;
+
 namespace Ucu.Poo.GameOfLife;
 
-
-public class GamePrinter
+public class GamePrinter //Declaro la clase GamePrinter
 {
-    private Gameboard board;
-    
-    public GamePrinter (GameBoard board) //Defino método constructor de un objeto board del tipo GameBoard
+    private bool[,] matrix; //Declaro un atributo privado matrix 
+
+    public GamePrinter(bool[,] matrix) //Método constructor que recibe matrix (de tipo bool[,] como parámetro)
     {
-        this.board = board;
+        this.matrix = matrix; //Asigno el parámetro matrix recibido al atributo matrix de la clase GamePrinter
     }
 
-    public void PrintMatrix()
+    public void PrintMatrix() //Defino método público PrintMatrix
     {
-        foreach (var row in board.matrix) 
+        int columnas = matrix.GetLength(1); //Guardo la cantidad de columas del bool[,]matrix en la variable columnas
+        int contador = 0; //Inicializo un contador en 0 
+
+        foreach (bool valor in matrix) // Recorro los valores de la matrix uno por uno 
         {
-            foreach (var cell in row)
+            if (valor == true) // Si el valor es true imprimo "|X|"
             {
-                
-                if (cell)           
-                {
-                    Console.Write("|X|"); 
-                }
-                else
-                {
-                    Console.Write("---");
-                }
+                Console.Write("|X|");
             }
-            Console.WriteLine();
+            else// Sino imprimo "---"
+            {
+                Console.Write("---");
+            }
+
+            contador++; // El contador se incremeta en 1
+            if (contador % columnas == 0) // Si el contador es divisible entre la cantidad de columnas, se hace un salto de línea
+            {
+                Console.WriteLine();
+            }
         }
     }
 }

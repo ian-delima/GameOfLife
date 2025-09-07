@@ -6,7 +6,15 @@ namespace Ucu.Poo.GameOfLife
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            bool[][] matrix =
+            {
+                new bool[] { true, false, true },
+                new bool[] { false, true, false },
+                new bool[] { true, true, false }
+            };
+
+            GamePrinter printer = new GamePrinter(matrix);
+            printer.PrintMatrix();
         }
     }
 }
